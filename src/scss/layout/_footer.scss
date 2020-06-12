@@ -15,35 +15,33 @@
     justify-content: center;
     align-items: center;
     transform: translate(0, -50%);
+    flex-shrink: 0;
   }
   .footer__nav ul {
-    padding-left: 0px;
+    padding: 0px;
     li {
       list-style-type: none;
       a {
         color: $color-light;
+        font-family: $font-main;
         font-size: 16px;
         line-height: 30px;
         text-transform: uppercase;
       }
     }
-    &1 {
-      margin-top: 60px;
-    }
-    &2 {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
   }
+
   &__copy {
     color: $color-light;
     font-size: 14px;
     line-height: 30px;
+    margin-top: 20px;
   }
   &__welove {
     color: $color-light;
     font-size: 14px;
     line-height: 30px;
+    margin-bottom: 45px;
     .heart {
       color: $color-buttons;
     }

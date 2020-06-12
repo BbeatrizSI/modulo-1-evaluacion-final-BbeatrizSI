@@ -4,10 +4,12 @@
   padding: 15px;
   height: 376px;
 
-  .section1__text--small {
+  &__text--small {
     color: $color-section-darker;
     font-size: 14px;
-    // margin-top: 30px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 2px;
   }
   h2 {
     font-family: $font-titles;
@@ -18,6 +20,7 @@
   }
   p {
     text-align: left;
+    line-height: 30px;
     margin: 15px auto 30px auto;
   }
   .section1__btn--go {
@@ -25,6 +28,7 @@
     height: 45px;
     border: 2px solid $color-buttons;
     border-radius: 22.5px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,42 +44,43 @@
 /* SECTION2 */
 
 .section2 {
+  border: 1px solid red;
   height: 624px;
+  width: 100%;
   background-color: $color-section;
-  display: grid;
-  grid-template-columns: 68px 92px 92px 68px;
-  grid-template-rows: 105px 138px 138px 93px 150px;
-  text-align: center;
 
   h2 {
     margin-top: 30px;
-    grid-column: span 4;
-    grid-row: 1;
+    margin-bottom: 45px;
     font-family: $font-titles;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
+    text-transform: capitalize;
   }
-  &__reason {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    h3 {
-      font-family: $font-titles;
-      font-size: 18px;
-    }
-    p {
-      font-size: 18px;
+  &__reasons {
+    display: grid;
+    grid-template-columns: 21.25% 28.75% 28.75% 21.25%;
+    grid-template-rows: 138px 138px 93px;
+    &--item {
+      grid-column: 2/4;
+      h3 {
+        font-family: $font-titles;
+        font-size: 18px;
+      }
+      p {
+        font-size: 18px;
+      }
     }
   }
   &__btn--reasons {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    margin-top: 45px;
+    margin: 45px auto 60px auto;
     width: 184px;
     height: 45px;
     border: 2px solid $color-buttons;
     background-color: $color-buttons;
     border-radius: 22.5px;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
