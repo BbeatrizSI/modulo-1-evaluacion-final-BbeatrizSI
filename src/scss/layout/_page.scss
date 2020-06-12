@@ -2,3 +2,13 @@ html {
   font-family: $font-main;
   font-size: 16px;
 }
+.wrapper {
+  padding: 0px 15px;
+
+  @include tablet {
+    padding: 0px 39px;
+  }
+  @include desktop {
+    padding: 0px 275px;
+  }
+}

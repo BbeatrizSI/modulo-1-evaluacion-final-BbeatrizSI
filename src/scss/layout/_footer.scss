@@ -1,9 +1,11 @@
 .footer {
   background-color: $color-footer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 465px;
+  @include tablet {
+    height: 240px;
+    display: flex;
+    justify-content: center;
+  }
 
   &__btn--top {
     background-color: $color-light;
@@ -14,13 +16,68 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(0, -50%);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
     flex-shrink: 0;
+
+    @include tablet {
+      transform: none;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include desktop {
+      transform: translate(-950%, -50%);
+    }
   }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      transform: translate(0, -15px);
+      margin-top: 45px;
+    }
+    @include desktop {
+      width: 600px;
+    }
+  }
+  .footer__container--small {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      text-align: left;
+      align-items: flex-start;
+      order: 1;
+    }
+  }
+  .footer__nav1 {
+    @include tablet {
+      order: 2;
+    }
+  }
+  .footer__nav2 {
+    @include tablet {
+      order: 3;
+    }
+  }
+
   .footer__nav ul {
     padding: 0px;
+    width: 210px;
     li {
       list-style-type: none;
+      @include tablet {
+        text-align: left;
+      }
+
       a {
         color: $color-light;
         font-family: $font-main;
