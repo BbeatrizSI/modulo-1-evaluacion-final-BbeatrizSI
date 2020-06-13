@@ -1,10 +1,14 @@
 .footer {
   background-color: $color-footer;
   height: 465px;
+
   @include tablet {
     height: 240px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 0px 39px 0px 39px;
   }
 
   &__btn--top {
@@ -19,15 +23,36 @@
     position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
-    flex-shrink: 0;
+    animation-name: restless;
+    animation-delay: 2s;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    @keyframes restless {
+      0% {
+        margin-left: 0%;
+      }
+      25% {
+        margin-left: 2%;
+      }
+      50% {
+        margin-left: 0%;
+      }
+      75% {
+        margin-left: -2%;
+      }
+      100% {
+        margin-left: 0%;
+      }
+    }
 
     @include tablet {
-      transform: none;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(0%, -100%);
+      left: 0%;
     }
     @include desktop {
-      transform: translate(-950%, -50%);
+      transform: translate(0%, -100%);
     }
   }
 
@@ -38,44 +63,55 @@
 
     @include tablet {
       flex-direction: row;
-      justify-content: space-between;
       align-items: flex-start;
-      transform: translate(0, -15px);
-      margin-top: 45px;
+      transform: translate(0%, -15%);
+      width: 690px;
     }
     @include desktop {
       width: 600px;
     }
   }
   .footer__container--small {
-    width: 210px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
     @include tablet {
       text-align: left;
       align-items: flex-start;
+      justify-content: flex-start;
       order: 1;
     }
   }
   .footer__nav1 {
+    margin-top: 15px;
     @include tablet {
       order: 2;
+      margin-top: 0px;
     }
   }
   .footer__nav2 {
+    margin-top: 35px;
+    margin-bottom: 10px;
     @include tablet {
       order: 3;
+      margin-top: 0px;
+      margin-bottom: 0px;
     }
   }
 
   .footer__nav ul {
     padding: 0px;
-    width: 210px;
+    width: 240px;
+
+    @include desktop {
+      width: 210px;
+    }
     li {
       list-style-type: none;
       @include tablet {
         text-align: left;
+        margin-left: 40px;
       }
 
       a {
@@ -93,6 +129,9 @@
     font-size: 14px;
     line-height: 30px;
     margin-top: 20px;
+    @include tablet {
+      margin-top: 0px;
+    }
   }
   &__welove {
     color: $color-light;
