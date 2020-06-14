@@ -1,26 +1,25 @@
 .section2 {
   height: 624px;
-  width: 100%;
   background-color: $color-section;
   @include tablet {
     height: 397px;
-    padding: 0px 35.7px 0px 35.7px;
+    padding: 0px 5% 0px 5%;
   }
   @include desktop {
-    padding: 0px 85px;
+    padding: 0px 7%;
   }
 
   h2 {
     padding-top: 30px;
     padding-bottom: 45px;
     font-family: $font-titles;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     font-weight: 700;
     text-transform: capitalize;
     @include tablet {
-      font-size: 32px;
-      line-height: 45px;
+      font-size: 2rem;
+      line-height: 2.813rem;
     }
     @include desktop {
       padding-top: 60px;
@@ -38,27 +37,26 @@
     @include desktop {
       grid-template-rows: 150px;
       grid-gap: 80px;
-      margin-top: 45px;
     }
     &--item {
       grid-column: 2/4;
       h3 {
         font-family: $font-titles;
-        font-size: 18px;
+        font-size: 1.125rem;
         @include tablet {
           margin-bottom: 14px;
-          font-size: 24px;
-          line-height: 30px;
+          font-size: 1.5rem;
+          line-height: 1.875rem;
         }
         @include desktop {
-          line-height: 1.25;
+          line-height: 2.375rem;
         }
       }
       p {
         font-size: 18px;
         @include tablet {
-          font-size: 20px;
-          line-height: 30px;
+          font-size: 1.25rem;
+          line-height: 1.875rem;
           margin-bottom: 60px;
         }
       }

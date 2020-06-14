@@ -3,15 +3,15 @@
   width: 100%;
 
   &__menu {
+    background-image: url(../images/ico-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $color-burger;
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: $color-burger;
     width: 44px;
     height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 5;
   }
   &__hero {
@@ -28,50 +28,49 @@
     h1 {
       color: $color-light;
       font-family: $font-titles;
-      text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-      font-size: 42px;
-      line-height: 55px;
+      text-shadow: 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.2);
+      font-size: 2.625rem;
+      line-height: 3.438rem;
       text-transform: uppercase;
       @include tablet {
-        font-size: 80px;
-        line-height: 1.31em;
+        font-size: 5rem;
+        line-height: 6.563rem;
       }
       @include desktop {
-        font-size: 100px;
-        line-height: 132px;
+        font-size: 6.25rem;
+        line-height: 8.25rem;
       }
     }
     p {
       color: $color-light;
       margin-top: 10px;
       @include tablet {
-        font-size: 24px;
-        margin-top: 20px;
+        font-size: 1.5rem;
+        margin-top: 1.25rem;
       }
       @include desktop {
         margin-top: 0px;
       }
     }
+    a {
+      margin-top: 45px;
+      margin-bottom: 50px;
+      @include tablet {
+        margin-bottom: 45px;
+      }
+      @include desktop {
+        margin-bottom: 13px;
+      }
+    }
   }
 
   &__btn--scroll {
+    background-image: url(../images/ico-scroll-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: $color-light;
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 45px;
-    margin-bottom: 50px;
-    @include tablet {
-      margin-bottom: 45px;
-    }
-    @include desktop {
-      margin-bottom: 13px;
-    }
-    a {
-      padding: 10px;
-    }
   }
 }

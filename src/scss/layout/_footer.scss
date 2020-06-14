@@ -8,18 +8,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 39px 0px 39px;
+    padding: 0px 5% 0px 5%;
   }
 
   &__btn--top {
+    background-image: url(../images/ico-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: $color-light;
     box-shadow: 0 2px 4px 0 $color-dark;
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -31,19 +31,19 @@
 
     @keyframes restless {
       0% {
-        margin-left: 0%;
+        transform: translatex(-50%, -50%);
       }
       25% {
-        margin-left: 2%;
+        transform: translate(-60%, -50%);
       }
       50% {
-        margin-left: 0%;
+        transform: translate(-50%, -50%);
       }
       75% {
-        margin-left: -2%;
+        transform: translate(-40%, -50%);
       }
       100% {
-        margin-left: 0%;
+        transform: translate(-50%, -50%);
       }
     }
 
@@ -117,17 +117,18 @@
       a {
         color: $color-light;
         font-family: $font-main;
-        font-size: 16px;
-        line-height: 30px;
+        font-size: 1rem;
+        line-height: 1.875rem;
         text-transform: uppercase;
+        padding: 5px;
       }
     }
   }
 
   &__copy {
     color: $color-light;
-    font-size: 14px;
-    line-height: 30px;
+    font-size: 0.875rem;
+    line-height: 1.875rem;
     margin-top: 20px;
     @include tablet {
       margin-top: 0px;
@@ -135,8 +136,8 @@
   }
   &__welove {
     color: $color-light;
-    font-size: 14px;
-    line-height: 30px;
+    font-size: 0.875rem;
+    line-height: 1.875rem;
     margin-bottom: 45px;
     .heart {
       color: $color-buttons;
