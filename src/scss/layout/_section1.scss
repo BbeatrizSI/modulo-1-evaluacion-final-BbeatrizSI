@@ -57,19 +57,20 @@
     height: 45px;
     border: 2px solid $color-buttons;
     border-radius: 22.5px;
+    background-color: $color-buttons;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: $font-main;
     font-weight: 500;
     font-size: 20px;
-    color: $color-buttons;
+    color: $color-light;
     transition: background-color ease 0.5s;
     transition: color ease 0.5s;
     margin-bottom: 45px;
     &:hover {
-      background-color: $color-buttons;
-      color: $color-light;
+      background-color: $color-light;
+      color: $color-buttons;
     }
     &:active {
       background-color: $color-burger;
@@ -85,5 +86,9 @@
   }
   a {
     display: inline-block;
+    margin-top: 20px;
+    @include tablet {
+      margin-top: 0px;
+    }
   }
 }
